@@ -1,0 +1,357 @@
+--Creating the Tables
+-- 1. Create Applicant Table
+CREATE TABLE applicant_raw (
+    Reference_ID VARCHAR(255),
+    Given_Name TEXT,
+    Last_Name TEXT,
+    Major TEXT,
+    Country TEXT,
+    Recieved_At VARCHAR(255), -- Storing as text first due to scientific notation
+    University TEXT,
+    Citizenship TEXT,
+    Intake TEXT,
+    College_1st_Choice TEXT,
+    Phone_Number TEXT,
+    Street_1 TEXT,
+    Street_2 TEXT,
+    Street_3 TEXT,
+    City TEXT,
+    Region TEXT,
+    Postal TEXT,
+    Email_ID TEXT,
+    Date_of_Birth TEXT,
+    Comments TEXT,
+    Phone_Number_2 TEXT,
+    Admit_Date TEXT,
+    Most_Recent_Released_Decision TEXT,
+    Application_Source TEXT,
+    Is_Global_Grad TEXT,
+    SEVIS_ID TEXT,
+    Official_University_email_address TEXT,
+    Application_Agency_Code TEXT,
+    Created_At VARCHAR(255), -- Storing as text first due to scientific notation
+    Modified_At VARCHAR(255) -- Storing as text first due to scientific notation
+);
+
+-- 2. Create Connect Table
+CREATE TABLE connect_raw (
+    Reference_ID VARCHAR(255),
+    Deposit_Status TEXT,
+    Assigned TEXT,
+    Recieved_At TEXT,
+    University TEXT,
+    I_20_Status TEXT,
+    Created_At VARCHAR(255),
+    Modified_At VARCHAR(255)
+);
+
+-- 3. Create Outreach Table
+CREATE TABLE outreach_raw (
+    Student_Full_Name TEXT,
+    Program_Of_interest TEXT,
+    Term TEXT,
+    Application_Source TEXT,
+    Global_Grad_Indicator TEXT,
+    Deposit_Paid TEXT,
+    Accepted_Admission TEXT,
+    SEVIS_ID TEXT,
+    I_20_In_Slate TEXT,
+    Person_Email TEXT,
+    Person_SLU_Email_Address TEXT,
+    I_901_Status TEXT,
+    Citizenship_Primary TEXT,
+    Application_Agency_Code TEXT,
+    Contact_Number TEXT,
+    Student_Status TEXT,
+    Remarks TEXT,
+    Appointment_Date TEXT
+);
+
+-- 4. Create SEVIS Table
+CREATE TABLE sevis_raw (
+    SEVIS_ID VARCHAR(255),
+    NonImmigrant_ID TEXT,
+    FIN_ID TEXT,
+    SEVIS_Status TEXT,
+    Status_Change_Date TEXT,
+    Class_of_Admission TEXT,
+    Surname_Or_Primary_Name TEXT,
+    Given_Name TEXT,
+    Suffix TEXT,
+    Preferred_Name TEXT,
+    SEVIS_Legacy_First_Name TEXT,
+    SEVIS_Legacy_Middle_Name TEXT,
+    SEVIS_Legacy_Last_Name TEXT,
+    Country_of_Birth TEXT,
+    City_of_Birth TEXT,
+    Date_of_Birth TEXT,
+    Country_of_Citizenship TEXT,
+    Gender TEXT,
+    US_Physical_Address_Status TEXT,
+    US_Physical_Address_1 TEXT,
+    US_Physical_Address_2 TEXT,
+    US_Physical_City TEXT,
+    US_Physical_State TEXT,
+    US_Physical_Postal_Code TEXT,
+    US_Physical_Routing_Code TEXT,
+    US_Mailing_Address_Status TEXT,
+    US_Mailing_Address_1 TEXT,
+    US_Mailing_Address_2 TEXT,
+    US_Mailing_City TEXT,
+    US_Mailing_State TEXT,
+    US_Mailing_Postal_Code TEXT,
+    US_Mailing_Routing_Code TEXT,
+    Foreign_Address_1 TEXT,
+    Foreign_Address_2 TEXT,
+    Foreign_City TEXT,
+    Foreign_State_Province TEXT,
+    Foreign_Country TEXT,
+    Foreign_Postal_Code TEXT,
+    Email TEXT,
+    US_Telephone TEXT,
+    No_Phone_Indicator TEXT,
+    Foreign_Telephone_Country_Code TEXT,
+    Foreign_Telephone TEXT,
+    Number_of_Months_for_funding TEXT,
+    Passport_Name TEXT,
+    Passport_Number TEXT,
+    Passport_Expiration_Date TEXT,
+    Passport_Country_of_Issuance TEXT,
+    Visa_Number TEXT,
+    Visa_Issuance_Date TEXT,
+    Visa_Expiration_Date TEXT,
+    Visa_Issuance_Post TEXT,
+    Port_of_Entry TEXT,
+    Date_of_Entry TEXT,
+    I_94_Admission_Number TEXT,
+    Port_of_Departure TEXT,
+    Date_of_Departure TEXT,
+    Tuition_Fees TEXT,
+    Living_Expenses TEXT,
+    Dependent_Expenses TEXT,
+    Other_Costs TEXT,
+    Other_Costs_Comment TEXT,
+    Students_Personal_Funds TEXT,
+    Funds_From_This_School TEXT,
+    School_Fund_Type TEXT,
+    Funds_From_Other_Sources TEXT,
+    Other_Source_Type TEXT,
+    On_Campus_Employment TEXT,
+    Date_of_Last_Event TEXT,
+    Termination_Reason TEXT,
+    Other_Termination_Comment TEXT,
+    School_Name TEXT,
+    School_Code TEXT,
+    Campus_Name TEXT,
+    Campus_Code TEXT,
+    I_20_Issue_Reason TEXT,
+    Education_Level TEXT,
+    Major_1_Code TEXT,
+    Major_1_Description TEXT,
+    Major_1_CIP_2020_Conversion TEXT,
+    Major_2_Code TEXT,
+    Major_2_Description TEXT,
+    Major_2_CIP_2020_conversion TEXT,
+    Minor_Code TEXT,
+    Minor_Description TEXT,
+    Minor_CIP_2020_Conversion TEXT,
+    Program_Start_Date TEXT,
+    Program_End_Date TEXT,
+    Initial_Session_Start_Date TEXT,
+    Current_Session_Start_Date TEXT,
+    Current_Session_End_Date TEXT,
+    Next_Session_Start_Date TEXT,
+    Last_Session TEXT,
+    Study_Research_Abroad TEXT,
+    Thesis_Or_Dissertation TEXT,
+    School_Requires_English_Proficiency TEXT,
+    Student_Has_English_Proficiency TEXT,
+    English_Is_Not_Required_Because TEXT,
+    CPT_Approved TEXT,
+    OCE_Requested TEXT,
+    OCE_Approved TEXT,
+    Pre_Completion_OPT_Requested TEXT,
+    Pre_Completion_OPT_Approved TEXT,
+    Post_Completion_OPT_Requested TEXT,
+    Post_Completion_OPT_Approved TEXT,
+    STEM_OPT_Requested TEXT,
+    STEM_OPT_Approved TEXT,
+    Cap_Gap_Extended TEXT,
+    Student_Requested_Reinstatement TEXT,
+    Student_Change_of_Status_Request TEXT,
+    Student_Extension_Requested TEXT,
+    Student_Authorized_to_Drop_Below_Full_Course_of_Study TEXT,
+    Student_Transfer_Out TEXT,
+    I_901_Transaction_Type TEXT,
+    I_901_Transaction_Date TEXT,
+    I_901_Transaction_Amount TEXT,
+    I_901_Fee_Payment_Receipt TEXT,
+    Border_Commuter_Student TEXT,
+    Correction_Request_Pending TEXT,
+    Cancellation_Reason TEXT,
+    Overall_Remarks TEXT,
+    Length_of_Next_Break_of_Vacation TEXT,
+    OPT_Portal TEXT
+);
+
+
+--Cleaning Datasets
+-- 1. Clean APPLICANT Table
+DROP TABLE IF EXISTS applicant_clean;
+
+CREATE TABLE applicant_clean AS
+SELECT
+    TRIM(Reference_ID) AS Reference_ID,
+    Given_Name,
+    Last_Name,
+    Major,
+    Country,
+    City, -- <--- Added City Here
+    -- Fix: Treat text "NULL" as empty before converting math
+    TO_TIMESTAMP(NULLIF(NULLIF(Recieved_At, ''), 'NULL')::NUMERIC / 1000) AS Recieved_At,
+    University,
+    Citizenship,
+    Intake,
+    College_1st_Choice,
+    Email_ID,
+    TO_DATE(NULLIF(NULLIF(Date_of_Birth, ''), 'NULL'), 'MM/DD/YYYY') AS Date_of_Birth,
+    Application_Source,
+    TRIM(SEVIS_ID) AS SEVIS_ID,
+    TO_TIMESTAMP(NULLIF(NULLIF(Created_At, ''), 'NULL')::NUMERIC / 1000) AS Created_At,
+    Most_Recent_Released_Decision,
+    TO_DATE(NULLIF(NULLIF(Admit_Date, ''), 'NULL'), 'MM/DD/YYYY') AS Admit_Date
+FROM applicant_raw;
+-- 2. Clean CONNECT Table
+DROP TABLE IF EXISTS connect_clean;
+CREATE TABLE connect_clean AS
+SELECT
+    TRIM(Reference_ID) AS Reference_ID,
+    Deposit_Status,
+    Assigned,
+    -- Fix: Treat text "NULL" as empty before converting timestamp
+    TO_TIMESTAMP(NULLIF(NULLIF(Recieved_At, ''), 'NULL'), 'MM/DD/YYYY HH24:MI') AS Recieved_At,
+    University,
+    I_20_Status,
+    TO_TIMESTAMP(NULLIF(NULLIF(Created_At, ''), 'NULL')::NUMERIC / 1000) AS Created_At,
+    TO_TIMESTAMP(NULLIF(NULLIF(Modified_At, ''), 'NULL')::NUMERIC / 1000) AS Modified_At
+FROM connect_raw;
+
+-- 3. Clean OUTREACH Table 
+DROP TABLE IF EXISTS outreach_clean;
+CREATE TABLE outreach_clean AS
+SELECT
+    Student_Full_Name,
+    Program_Of_interest,
+    Term,
+    Application_Source,
+    Deposit_Paid,
+    TRIM(SEVIS_ID) AS SEVIS_ID,
+    Person_Email,
+    Citizenship_Primary,
+    Student_Status,
+    Remarks
+FROM outreach_raw;
+
+-- 4. Clean SEVIS Table
+DROP TABLE IF EXISTS sevis_clean;
+CREATE TABLE sevis_clean AS
+SELECT
+    TRIM(SEVIS_ID) AS SEVIS_ID,
+    SEVIS_Status,
+    TO_DATE(NULLIF(NULLIF(Status_Change_Date, ''), 'NULL'), 'MM/DD/YYYY') AS Status_Change_Date,
+    Surname_Or_Primary_Name,
+    Given_Name,
+    Country_of_Citizenship,
+    Gender,
+    Email,
+    TO_DATE(NULLIF(NULLIF(Visa_Expiration_Date, ''), 'NULL'), 'MM/DD/YYYY') AS Visa_Expiration_Date,
+    Education_Level,
+    Major_1_Description,
+    TO_DATE(NULLIF(NULLIF(Program_Start_Date, ''), 'NULL'), 'MM/DD/YYYY') AS Program_Start_Date,
+    TO_DATE(NULLIF(NULLIF(Program_End_Date, ''), 'NULL'), 'MM/DD/YYYY') AS Program_End_Date,
+    -- NEW FINANCIAL COLUMNS
+    -- We cast these to NUMERIC so you can sum them up in the dashboard
+    CAST(NULLIF(Tuition_Fees, '') AS NUMERIC) AS Tuition_Fees,
+    CAST(NULLIF(Living_Expenses, '') AS NUMERIC) AS Living_Expenses,
+    CAST(NULLIF(Dependent_Expenses, '') AS NUMERIC) AS Dependent_Expenses,
+    CAST(NULLIF(Other_Costs, '') AS NUMERIC) AS Other_Costs,
+    CAST(NULLIF(Students_Personal_Funds, '') AS NUMERIC) AS Students_Personal_Funds,
+    CAST(NULLIF(Funds_From_This_School, '') AS NUMERIC) AS Funds_From_This_School, -- Scholarships usually
+    CAST(NULLIF(Funds_From_Other_Sources, '') AS NUMERIC) AS Funds_From_Other_Sources,
+    CAST(NULLIF(On_Campus_Employment, '') AS NUMERIC) AS On_Campus_Employment
+FROM sevis_raw;
+
+--Joining the datasets
+DROP TABLE IF EXISTS master_report;
+
+
+--Final Master Join
+DROP TABLE IF EXISTS master_report_final;
+
+CREATE TABLE master_report_final AS
+SELECT DISTINCT ON (a.Reference_ID)
+    -- Applicant Info
+    a.Reference_ID,
+    a.Given_Name,
+    a.Last_Name,
+    a.Major,
+    a.Country,
+    a.City, -- <--- Added City Here
+    
+    -- FORCE DATES TO BE SIMPLE DATES (Fixes Looker Studio Issue)
+    CAST(a.Recieved_At AS DATE) AS Application_Date, 
+    
+    a.University,
+    a.Citizenship,
+    a.Intake,
+    a.College_1st_Choice,
+    a.Email_ID,
+    a.Date_of_Birth,
+    a.Application_Source,
+    a.SEVIS_ID,
+    a.Most_Recent_Released_Decision,
+    a.Admit_Date,
+
+    -- Connect Info
+    c.Deposit_Status AS Connect_Deposit_Status,
+    c.Assigned AS Connect_Assigned_To,
+    CAST(c.Recieved_At AS DATE) AS Connect_Recieved_Date, -- Fixed Date
+    c.I_20_Status AS Connect_I20_Status,
+
+    -- Outreach Info
+    o.Student_Status AS Outreach_Student_Status,
+    o.Full_Remarks_History AS Outreach_Remarks,
+    o.Deposit_Paid AS Outreach_Deposit_Paid,
+    o.Program_Of_interest,
+    o.Term,
+
+    -- SEVIS Info
+    s.SEVIS_Status,
+    s.Visa_Expiration_Date,
+    s.Program_Start_Date,
+    s.Program_End_Date,
+    s.Education_Level,
+    s.Major_1_Description AS SEVIS_Major,
+
+    -- Financials
+    s.Tuition_Fees,
+    s.Living_Expenses,
+    s.Dependent_Expenses,
+    s.Other_Costs,
+    s.Students_Personal_Funds,
+    s.Funds_From_This_School,
+    s.Funds_From_Other_Sources,
+    s.On_Campus_Employment,
+    
+    -- Calculated Fields
+    (COALESCE(s.Tuition_Fees, 0) + COALESCE(s.Living_Expenses, 0) + COALESCE(s.Dependent_Expenses, 0) + COALESCE(s.Other_Costs, 0)) AS Total_Estimated_Cost,
+    
+    ((COALESCE(s.Tuition_Fees, 0) + COALESCE(s.Living_Expenses, 0) + COALESCE(s.Dependent_Expenses, 0) + COALESCE(s.Other_Costs, 0)) - 
+     (COALESCE(s.Students_Personal_Funds, 0) + COALESCE(s.Funds_From_This_School, 0) + COALESCE(s.Funds_From_Other_Sources, 0) + COALESCE(s.On_Campus_Employment, 0))) AS Funding_Gap
+
+FROM applicant_clean a
+LEFT JOIN connect_latest c ON a.Reference_ID = c.Reference_ID
+LEFT JOIN outreach_latest o ON a.SEVIS_ID = o.SEVIS_ID
+LEFT JOIN sevis_clean s ON a.SEVIS_ID = s.SEVIS_ID
+ORDER BY a.Reference_ID;
+
