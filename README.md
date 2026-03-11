@@ -15,19 +15,19 @@ The resulting data models power an executive-level Looker Studio dashboard desig
 This project was a collaborative effort. I took on a dual role as a lead technical developer and the central project coordinator, ensuring seamless integration across the team's workflows.
 
 **Project Management & Coordination**
-* [cite_start]**Cross-Cultural Leadership:** Facilitated collaboration among team members from diverse backgrounds by scheduling and leading weekly meetings[cite: 1]. 
-* [cite_start]**Workflow Management:** Relayed and delegated weekly tasks, guided the development of the final presentation outline, and facilitated the final live presentation[cite: 3, 7].
-* [cite_start]**Synthesis:** Acted as the final editor, compiling diverse analytical workflows and insights from all teammates into a unified, coherent final document[cite: 5].
+* **Cross-Cultural Leadership:** Facilitated collaboration among team members from diverse backgrounds by scheduling and leading weekly meetings[cite: 1]. 
+* **Workflow Management:** Relayed and delegated weekly tasks, guided the development of the final presentation outline, and facilitated the final live presentation[cite: 3, 7].
+* **Synthesis:** Acted as the final editor, compiling diverse analytical workflows and insights from all teammates into a unified, coherent final document[cite: 5].
 
 **Data Engineering & Quality Assurance**
-* [cite_start]**Data Integration:** Cleaned, formatted, and joined disparate raw files to architect the unified Master Dataset[cite: 3].
-* [cite_start]**SQL Validation:** Developed and verified complex SQL queries to validate dashboard metrics, ensuring complete accuracy between the raw sources and final outputs[cite: 5].
-* [cite_start]**Data Governance:** Generated the initial Data Dictionary and Data Quality Report, documenting variables, data types, missing values, and outliers[cite: 1, 2].
+* **Data Integration:** Cleaned, formatted, and joined disparate raw files to architect the unified Master Dataset[cite: 3].
+* **SQL Validation:** Developed and verified complex SQL queries to validate dashboard metrics, ensuring complete accuracy between the raw sources and final outputs[cite: 5].
+* **Data Governance:** Generated the initial Data Dictionary and Data Quality Report, documenting variables, data types, missing values, and outliers[cite: 1, 2].
 
 **Exploratory Data Analysis (EDA) & Visualization**
-* [cite_start]**Python EDA:** Utilized Python to generate initial visualizations (histograms, boxplots, heatmaps) to identify early distributions, patterns, and correlations[cite: 1, 2].
-* [cite_start]**Dashboard Architecture:** Collaborated on the Looker Studio dashboard design, defining high-level KPIs, filtering logic, and color themes to support stakeholder decision-making[cite: 3, 4].
-* [cite_start]**Insight Generation:** Drafted the Insight Summary Report, clarifying data column mappings and translating visual anomalies into actionable, data-backed conclusions[cite: 5, 6].
+* **Python EDA:** Utilized Python to generate initial visualizations (histograms, boxplots, heatmaps) to identify early distributions, patterns, and correlations[cite: 1, 2].
+* **Dashboard Architecture:** Collaborated on the Looker Studio dashboard design, defining high-level KPIs, filtering logic, and color themes to support stakeholder decision-making[cite: 3, 4].
+* **Insight Generation:** Drafted the Insight Summary Report, clarifying data column mappings and translating visual anomalies into actionable, data-backed conclusions[cite: 5, 6].
 
 ## 🔒 Data Privacy & Architecture Notes
 * **Raw Data Withheld:** Due to strict data privacy (PII) constraints regarding applicant data, the raw datasets are intentionally excluded from this public repository. 
@@ -40,8 +40,9 @@ This project was a collaborative effort. I took on a dual role as a lead technic
 * `/documentation`
   * `Data_Quality_Report.pdf`
   * `Final_Report.pdf` 
-* `/images`
+* `/Images`
   * `Dashboard.png` 
 
 ## 📊 Dashboard Preview
-![SLU Admissions Dashboard](images/Dashboard.png)
+
+![SLU Admissions Dashboard](Images/Dashboard.png)
